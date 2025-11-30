@@ -1,0 +1,17 @@
+note> TEST CASE 4: CONSTANT FOLDING OPTIMIZATION
+note> The compiler should solve these math problems BEFORE running.
+
+plot "--- Starting Optimization Test ---":
+
+note> 1. Simple Math
+val_1 = 5 + 5:
+plot "5 + 5 = " ~ val_1:
+
+note> 2. Complex Precedence (Order of Ops)
+note> Should solve 10 * 2 first (20), then + 5 (25)
+val_2 = 5 + 10 * 2:
+plot "5 + 10 * 2 = " ~ val_2:
+
+note> 3. Large Math
+val_3 = 100 - 50 / 2 + 5:
+plot "100 - 25 + 5 = " ~ val_3:

@@ -1,0 +1,85 @@
+note> This script demonstrates Semantic Error Handling
+plot "Starting Error Test...":
+val = "Hello":
+num = 10:
+note> ERROR: Subtraction is not defined for Strings
+plot val - num:
+
+
+
+
+note> Test Case: Math
+x = 4:
+y = x * 5:
+plot y:
+
+
+
+
+note> Test Case: Stitching
+name = "Fatimah":
+level = 7:
+plot "User: " ~ name:
+plot "Level " ~ level:
+plot "ID=" ~ 4 ~ 5 ~ 3 ~ 8:
+
+
+
+
+
+note> Test Case: Repeats
+plot "*" * 5:
+plot 3 * "Yo":
+plot ("Hi" ~ "!") * 3:
+
+
+
+
+
+note> Test Case: Logic
+name = "Santa":
+score = 8:
+
+check score > 5 {
+    plot name ~ " passed!":
+} else {
+    plot name ~ " failed!":
+}
+
+
+
+
+
+note> Test Case: Loops
+loop i in 1..3 {
+    plot "Step " ~ i ~ ": " ~ ("-" * i):
+}
+
+
+
+
+note> Test Case: Selection
+day = 7:
+
+choose day {
+    1 -> plot "Mon":
+    2 -> plot "Tue":
+    3 -> plot "Wed":
+    default -> plot "Unknown":
+}
+
+
+
+note> Test Case: Combined example
+name = "Leo":
+stars = 5:
+
+plot "Welcome " ~ name ~ "!":
+
+loop i in 1..stars {
+    check i % 2 == 0 {
+        plot "Even: " ~ ("*" * i):
+    } else {
+        plot "Odd: " ~ ("#" * i):
+    }
+}
